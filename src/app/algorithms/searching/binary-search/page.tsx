@@ -1,5 +1,6 @@
 'use client';
 
+import { useEffect } from 'react';
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '@/components/ui/card';
 import { ArrayDisplay } from '@/components/visualizations/searching/array-display';
 import { SearchControls } from '@/components/visualizations/searching/search-controls';
@@ -27,7 +28,10 @@ export default function BinarySearchPage() {
     setSpeed,
   } = useBinarySearch([]);
 
-
+  useEffect(() => {
+    generateArray(INITIAL_ARRAY_SIZE);
+  }, []);
+  
   return (
     <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl py-8">
       <h1 className="text-3xl font-bold mb-2">Binary Search Algorithm</h1>
