@@ -1,101 +1,110 @@
-import Image from "next/image";
+import Link from 'next/link';
+import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
+import { Badge } from '@/components/ui/badge';
+import { ArrowRight, GitBranch, LineChart, List, Network, Share2, BarChart2 } from 'lucide-react';
 
 export default function Home() {
-  return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-semibold">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
+  const categories = [
+    {
+      title: "Sorting Algorithms",
+      description: "Visualize and compare different sorting techniques",
+      icon: <List className="h-8 w-8" />,
+      path: "/algorithms/sorting",
+      algorithms: ["Bubble Sort", "Merge Sort", "Quick Sort", "Heap Sort"],
+      color: "bg-blue-100 text-blue-800",
+    },
+    {
+      title: "Searching Algorithms",
+      description: "Explore various searching strategies",
+      icon: <Share2 className="h-8 w-8" />,
+      path: "/algorithms/searching",
+      algorithms: ["Binary Search", "Linear Search", "Depth-First Search", "Breadth-First Search"],
+      color: "bg-green-100 text-green-800",
+    },
+    {
+      title: "Graph Algorithms",
+      description: "Visualize graph traversal and pathfinding",
+      icon: <Network className="h-8 w-8" />,
+      path: "/algorithms/graph",
+      algorithms: ["Dijkstra's Algorithm", "A* Search", "Bellman-Ford", "Floyd-Warshall"],
+      color: "bg-purple-100 text-purple-800",
+    },
+    {
+      title: "Tree Structures",
+      description: "Explore different tree data structures",
+      icon: <GitBranch className="h-8 w-8" />,
+      path: "/data-structures/trees",
+      algorithms: ["Binary Search Tree", "AVL Tree", "Red-Black Tree", "Heap"],
+      color: "bg-amber-100 text-amber-800",
+    },
+    {
+      title: "Dynamic Programming",
+      description: "Visualize dynamic programming techniques",
+      icon: <LineChart className="h-8 w-8" />,
+      path: "/algorithms/dynamic-programming",
+      algorithms: ["Fibonacci", "Knapsack Problem", "Longest Common Subsequence"],
+      color: "bg-red-100 text-red-800",
+    },
+    {
+      title: "Data Structures",
+      description: "Explore fundamental data structures",
+      icon: <BarChart2 className="h-8 w-8" />,
+      path: "/data-structures",
+      algorithms: ["Linked List", "Stack", "Queue", "Hash Table"],
+      color: "bg-teal-100 text-teal-800",
+    },
+  ];
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
-        </div>
-      </main>
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
+  return (
+    <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl py-8">
+      <div className="text-center mb-12">
+        <h1 className="text-4xl font-extrabold tracking-tight lg:text-5xl mb-4">
+          Algorithm Visualizer
+        </h1>
+        <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+          Interactive visualizations to help understand algorithms and data structures
+        </p>
+      </div>
+
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        {categories.map((category, index) => (
+          <Link href={category.path} key={index} className="transition-transform hover:scale-[1.02]">
+            <Card className="h-full flex flex-col">
+              <CardHeader className="pb-2">
+                <div className="flex items-center justify-between">
+                  <div className={`p-2 rounded-md ${category.color}`}>
+                    {category.icon}
+                  </div>
+                </div>
+                <CardTitle className="mt-4">{category.title}</CardTitle>
+                <CardDescription>{category.description}</CardDescription>
+              </CardHeader>
+              <CardContent className="flex-grow">
+                <div className="flex flex-wrap gap-2">
+                  {category.algorithms.map((algo, idx) => (
+                    <Badge key={idx} variant="secondary">{algo}</Badge>
+                  ))}
+                </div>
+              </CardContent>
+              <CardFooter className="pt-2">
+                <div className="flex items-center text-sm text-primary">
+                  Explore{" "}
+                  <ArrowRight className="h-4 w-4 ml-1" />
+                </div>
+              </CardFooter>
+            </Card>
+          </Link>
+          
+        ))}
+      </div>
+
+      <div className="mt-12 text-center">
+        <h2 className="text-2xl font-bold mb-4">Why Visualize Algorithms?</h2>
+        <p className="max-w-2xl mx-auto text-muted-foreground">
+          Algorithm visualizations help deepen understanding by transforming abstract concepts into 
+          interactive visual representations. This makes learning more engaging and intuitive.
+        </p>
+      </div>
     </div>
   );
 }
