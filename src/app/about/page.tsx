@@ -1,5 +1,3 @@
-import Image from 'next/image';
-
 export default function AboutPage() {
   return (
     <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-5xl py-12">
@@ -21,7 +19,7 @@ export default function AboutPage() {
             <div className="prose prose-lg max-w-none text-gray-600">
               <p>
                 Creating a tool to visually explain algorithms and data structures has been something 
-                I've always wanted to do. Throughout my journey learning computer science, I found that 
+                I have always wanted to do. Throughout my journey learning computer science, I found that 
                 visualizing these concepts made them significantly easier to understand - yet good 
                 visualizations were often hard to find.
               </p>
@@ -84,13 +82,13 @@ export default function AboutPage() {
               yet they can be challenging to grasp without proper visualization.
             </p>
             <p>
-              Whether you're a student learning these concepts for the first time, a developer 
+              Whether you are a student learning these concepts for the first time, a developer 
               brushing up on fundamentals, or someone preparing for technical interviews, I hope 
               this tool provides clarity and insight. The step-by-step visualizations are designed 
               to make abstract concepts concrete and accessible.
             </p>
             <p>
-              I believe that learning is most effective when it's interactive and visual. By seeing 
+              I believe that learning is most effective when it is interactive and visual. By seeing 
               exactly how algorithms work - watching elements being compared, swapped, and arranged - 
               you can develop an intuitive feel for their behavior and efficiency.
             </p>
