@@ -48,7 +48,7 @@ export default function RootLayout({
               <Link href="/about" className="text-sm text-muted-foreground hover:underline">
                 About
               </Link>
-              <Link href="https://github.com/Asetou" className="text-sm text-muted-foreground hover:underline">
+              <Link href="https://github.com/Asetou/algo-visualizer" className="text-sm text-muted-foreground hover:underline">
                 GitHub
               </Link>
               <Link href="https://panou.dev/" className="text-sm text-muted-foreground hover:underline">

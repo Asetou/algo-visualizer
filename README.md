@@ -1,3 +1,10 @@
+# Algorithm Visualizer
+
+An algorithm visualization project using **React**, **Next.js**, **Tailwind**, and **ShadCN UI**.
+
+## 📁 Project Structure
+
+```
 src/
   ├── components/
   │   ├── ui/                     # ShadCN UI components
@@ -35,5 +42,32 @@ src/
       └── data-structures/
           ├── trees/page.tsx
           └── ...
+```
 
+## 🚀 Features
+- 📊 **Sorting Algorithms**: Visualize Bubble Sort, Quick Sort, Merge Sort, and more.
+- 🌲 **Data Structures**: Explore trees, linked lists, and graph structures.
+- 🎨 **ShadCN UI Components**: Clean and modern UI components.
+- 🎬 **Interactive Animations**: Step through algorithms with play/pause controls.
+- 🔄 **Custom Hooks**: Manage algorithm state and visualization controls effectively.
+
+## 🛠️ Installation
+
+Clone the repository and install dependencies:
+
+```sh
+git clone https://github.com/your-username/algorithm-visualizer.git
+cd algorithm-visualizer
+npm install
+```
+
+## 📌 Usage
+
+Start the development server:
+
+```sh
+npm run dev
+```
+
+Open [http://localhost:3000](http://localhost:3000) in your browser.
 
